@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>experience-form</title>
+  <link rel="stylesheet" href="/css/templateStyle/form.css">
+  <link rel="stylesheet" href="/css/staticFile/style.css">
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+    <div class="info">
+      <p>
+        <b>PROFESSIONAL SUMMARY</b>
+      </p>
+      <p>
+        Write a short summary telling more about yourself, your strengths and experience. Feel free to use our pre-written examples.
+      </p>
+    </div>
+    <form method="post" action="/summary-data">
+      <!--input field for experience-info form section-->
+      <div class="summary-input-field">
+        <div class="user-summary input-box">
+          <label for="summary">summary:</label>
+          <textarea id="summary" class="textarea" name="summary" placeholder="Write a short summary telling more about yourself, your strengths and experience."></textarea>
+        </div>
+      </div>
+      <div class="sub-btn">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <!--expereience info form end-->
+  <%- include('../partials/footer') %>
+  </body>
+</html>

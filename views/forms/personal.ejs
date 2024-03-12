@@ -1,0 +1,68 @@
+<!-- form.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>personal-form</title>
+  <link rel="stylesheet" href="/css/templateStyle/form.css">
+  <link rel="stylesheet" href="/css/staticFile/style.css">
+  <script defer src="js/personalForm.js"></script>
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+  <div class="info">
+    <p>
+      COMPLETE YOUR<br> <b>RESUME HEADING</b>
+    </p>
+    <p>
+      Employers will use this information to<br> contact you.
+    </p>
+  </div>
+    <form action="/personal-data" method="POST" enctype="multipart/form-data">
+      <!-- Hidden field to capture the selected template -->
+      <input type="hidden" name="selectedTemplate" value="<%= template %>">
+      <!-- Form fields for the user to fill out -->
+      <!--personal-info form start-->
+      <div class="personal-info">
+        <div class="user-img flex-box">
+          <img id="imagePreview" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6LXNJFTmLzCoExghcATlCWG85kI8dsnhJng&usqp=CAU" alt="Preview Image">
+          <input type="file" id="img-input" onchange="displayImage(event)" accept="image/*" name="userImage" required>
+        </div>
+        <div class="user-name input-box">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" placeholder="e.g. Mohd Akmal">
+        </div>
+        <div class="user-address input-box">
+          <label for="address">address:</label>
+          <input type="address" id="address" name="address" placeholder="e.g. jinna road">
+        </div>
+        <div class="user-city input-box">
+          <label for="city">city:</label>
+          <input type="address" id="city" name="city" placeholder="e.g. Bikaner">
+        </div>
+        <div class="user-country input-box">
+          <label for="country">country:</label>
+          <input type="address" id="country" name="country" placeholder="e.g. country">
+        </div>
+        <div class="user-country input-box">
+          <label for="zipcode">zip code:</label>
+          <input type="address" id="zipcode" name="zipcode" placeholder="e.g. 334001">
+        </div>
+        <div class="user-email input-box">
+          <label for="email">Email address:</label>
+          <input type="email" id="email" name="email" placeholder="e.g. mohd@gmail.com">
+        </div>
+        <div class="user-number input-box">
+          <label for="number">phone:</label>
+          <input type="number" id="email" name="number" placeholder="e.g. 9460451776">
+        </div>
+      </div>
+      <!--personal-info form end-->
+      <div class="sub-btn">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <%- include('../partials/footer') %>
+</body>
+</html>

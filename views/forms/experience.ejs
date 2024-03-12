@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>experience-form</title>
+  <link rel="stylesheet" href="/css/templateStyle/form.css">
+  <link rel="stylesheet" href="/css/staticFile/style.css">
+  <script defer src="js/experienceForm.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+    <div class="info">
+      <p>
+        <b>EXPERIENCE</b>
+      </p>
+      <p>
+        List your work experience, from the most recent to the oldest. Feel free to use our pre-written examples.
+      </p>
+    </div>
+    <form method="post" action="/experience-data">
+      <!--input field for experience-info form section-->
+      <div class="experience-input-field">
+        <div class="user-employer input-box">
+          <label for="employer">employer:</label>
+          <input type="text" id="employer" name="employer" placeholder="e.g. Google">
+        </div>
+        <div class="user-jobTitle input-box">
+          <label for="jobTitle">job title:</label>
+          <input type="text" id="jobTitle" name="jobTitle" placeholder="e.g. Software engineer">
+        </div>
+        <div class="user-jobCity input-box">
+          <label for="jobCity">City:</label>
+          <input type="text" id="jobCity" name="jobCity" placeholder="San Franciso">
+        </div>
+        <div class="user-jobState input-box">
+          <label for="jobState">State:</label>
+          <input type="text" id="jobState" name="jobState" placeholder="Callifornia">
+        </div>
+        <div class="user-jobDate input-box">
+          <div class="start-date">
+            <label for="jobStartDate">Start:</label>
+            <input type="month" id="jobStartDate" name="jobStartDate">
+          </div>
+          <div class="end-date">
+            <label for="jobEndDate">End:</label>
+            <input type="month" id="jobEndDate" name="jobEndDate">
+          </div>
+        </div>
+        <div class="user-jobDescription input-box">
+            <label for="jobDescription">job Description:</label>
+            <textarea id="jobDescription" class="textarea" name="jobDescription"></textarea>
+        </div>
+      </div>
+      <div class="sub-btn">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    
+    <!--expereience info form end-->
+  <%- include('../partials/footer') %>
+  </body>
+</html>

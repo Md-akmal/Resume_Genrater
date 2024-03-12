@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>education-form</title>
+  <link rel="stylesheet" href="/css/templateStyle/form.css">
+  <link rel="stylesheet" href="/css/staticFile/style.css">
+  <script defer src="js/educationForm.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+    <div class="info">
+      <p>
+        <b>EDUCATION</b>
+      </p>
+      <p>
+        Add information about your educational background.
+      </p>
+    </div>
+    <form method="post" action="/education-data">
+      <!--input field for education-info form section-->
+      <div class="education-input-field">
+        <div class="user-school input-box">
+          <label for="school">school:</label>
+          <input type="text" id="school" name="school" placeholder="e.g. Saint peter sec school">
+        </div>
+        <div class="user-educationCity input-box">
+          <label for="educationCity">city:</label>
+          <input type="text" id="educationCity" name="educationCity" placeholder="e.g. Bikaner">
+        </div>
+        <div class="user-degree input-box">
+          <label for="degree">Select a degree:</label>
+          <select name="degree" class="degree">
+            <option value="high school diploma">High School Diploma</option>
+            <option value="GED">GED</option>
+            <option value="Associate of Arts">Associate of Arts</option>
+            <option value="B-Tech in Computer Science">B-Tech in Computer Science</option>
+            <option value="B-Tech in Civil">B-Tech in Civil</option>
+            <option value="B-Tech in mechanical engineering">B-Tech in Mechanical Engineering</option>
+            <option value="MBA">MBA</option>
+            <option value="BCA">BCA</option>
+            <option value="MCA">MCA</option>
+            <option value="PH.D.">PH.D.</option>
+          </select>
+        </div>
+        <div class="user-educationField input-box">
+          <label for="educationField">Field of study:</label>
+          <input type="text" id="educationField" name="educationField" placeholder="Engineeing">
+        </div>
+        <div class="user-graduationDate input-box">
+          <label for="graduationDate">Graduation date:</label>
+          <input type="month" id="graduationDate" name="graduationDate">
+        </div>
+      </div>
+      <div class="sub-btn">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <!--education info form end-->
+  <%- include('../partials/footer') %>
+  </body>
+</html>

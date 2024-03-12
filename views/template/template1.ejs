@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/templateStyle/template.css">
+	<script defer src="js/template.js"></script>
+	<title>resume-template</title>
+</head>
+<body>
+	<div class="resume-container">
+		<div class="personal-info">
+			<div class="user-img">
+				<img src="uploads/<%= userImg.filename %>">
+			</div>
+			<div class="user-detail">
+				<h2><%= personalFormData.name %></h2>
+				<ul>
+					<li><ion-icon name="navigate-outline" class="icon"></ion-icon><%= personalFormData.address %>,<%= personalFormData.city %>,<%= personalFormData.country %>,<%= personalFormData.zipcode %></li>
+					<li><ion-icon name="call-outline" class="icon"></ion-icon><%= personalFormData.number %></li>
+					<li><ion-icon name="mail-outline" class="icon"></ion-icon><%= personalFormData.email %></li>
+				</ul>
+			</div>
+		</div>
+		<div class="info-container">
+			<div class="left-side">
+				<div class="user-summary">
+					<h2 class="sections-headings">Professional Summary</h2>
+					<p class="summary">
+            <%= summaryFormData.summary %>
+          </p>
+				</div>
+				<div class="experience-info">
+					<h2 class="sections-headings">Employment History</h2>
+          <div class="expe-1 reuse">
+            <h3 class="sub-heading"><%= experienceFormData.jobTitle %> at <%= experienceFormData.employer %>,<%= experienceFormData.jobCity %> <%= experienceFormData.state %></h3>
+            <div class="job-date">
+              <span><%= experienceFormData.jobStartDate %></span> to <span><%= experienceFormData.jobEndDate %></span>
+            </div>
+            <div class="job-description">
+              <%= experienceFormData.jobDescription %>
+            </div>
+          </div>
+				</div>
+				<div class="education-info">
+					<h2 class="sections-headings">Education</h2>
+					<div class="edu-1 reuse">
+						<h3 class="sub-heading"><%= educationFormData.degree %>,<%= educationFormData.school %>,<%= educationFormData.degree %></h3>
+						<div class="graduation-date">
+							<%= educationFormData.graduationDate %>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="right-side">
+				<div class="skill-info">
+					<h2 class="sections-headings">Skills</h2>
+					<div class="user-skill">
+						<ul>
+							<li><%= skillFormData.skill[0] %></li>
+              <li><%= skillFormData.skill[1] %></li>
+              <li><%= skillFormData.skill[2] %></li>
+              <li><%= skillFormData.skill[3] %></li>
+              <li><%= skillFormData.skill[4] %></li>
+              <li><%= skillFormData.skill[5] %></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="printBtn">
+	<button>Print</button>
+	</div>
+	<!-- scriptSection start-->
+	<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+	<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

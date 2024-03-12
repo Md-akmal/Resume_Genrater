@@ -1,0 +1,94 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.flex-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+label {
+  color: black;
+  text-transform: capitalize;
+  margin: 8px 0;
+  cursor: pointer;
+}
+.info p:first-child {
+  font-size: 1.5rem;
+  margin: 5px;
+}
+.info p {
+  margin: 10px 5px;
+  font-size: 15px;
+}
+
+/* css for personal info form section*/
+.user-img {
+  margin-left: 10px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+#imagePreview {
+  display: block;
+  max-width: 100px;
+  max-height: 100px;
+}
+.user-img input[type="file"] {
+  border: none;
+  background-color: #5fc14cfe;
+  padding: 10px 5px;
+  border-radius: 18px;
+  margin: 0 10px;
+  color: white;
+}
+.input-box {
+  display: flex;
+  align-items: left;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15px;
+}
+.input-box input {
+  padding: 10px;
+}
+.experience-input-field .user-jobDate .start-date{
+  margin: 15px 0;
+}
+.textarea {
+  max-height: 100%;
+  height: 200px;
+  columns: 200;
+  padding: 8px;
+  border: 1px solid black;
+}
+.sub-btn {
+  text-align: center;
+}
+.sub-btn button {
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: orange;
+  color: white;
+  font-size: 1.5rem;
+  border-radius: 10px;
+}
+.btn-container {
+  text-align: center;
+}
+.genrate-btn {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  padding: 15px;
+  background-color: green;
+  color: white;
+  text-transform: capitalize;
+  margin: 10px;
+  border-radius: 18px;
+  font-size: 1.2rem;
+}
+.input-box select {
+  padding: 10px;
+}

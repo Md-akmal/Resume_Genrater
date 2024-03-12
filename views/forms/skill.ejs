@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>education-form</title>
+  <link rel="stylesheet" href="/css/templateStyle/form.css">
+  <link rel="stylesheet" href="/css/staticFile/style.css">
+  <script defer src="js/skillForm.js"></script>
+  <script defer src="js/script.js"></script>
+</head>
+<body>
+  <%- include('../partials/navbar') %>
+    <div class="info">
+      <p>
+        <b>SKILLS</b>
+      </p>
+      <p>
+        Highlight 6-8 of your top skills.
+      </p>
+    </div>
+    <form method="post" action="/skill-data">
+      <!--input field for experience-info form section-->
+      <div class="skill-input-field">
+        <div class="user-skill input-box">
+          <label for="skill">skill:</label>
+          <input type="text" id="skill" name="skill" required>
+        </div>
+        <div class="user-skill input-box">
+          <label for="skill">skill:</label>
+          <input type="text" id="skill" name="skill" required>
+        </div>
+        <div class="user-skill input-box">
+          <label for="skill">skill:</label>
+          <input type="text" id="skill" name="skill" required>
+        </div>
+        <div class="user-skill input-box">
+          <label for="skill">skill:</label>
+          <input type="text" id="skill" name="skill" required>
+        </div>
+        <div class="user-skill input-box">
+          <label for="skill">skill:</label>
+          <input type="text" id="skill" name="skill" required>
+        </div>
+        <div class="user-skill input-box">
+          <label for="skill">skill:</label>
+          <input type="text" id="skill" name="skill" required>
+        </div>
+      </div>
+      <div class="sub-btn">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+    <!--education info form end-->
+  <%- include('../partials/footer') %>
+  </body>
+</html>

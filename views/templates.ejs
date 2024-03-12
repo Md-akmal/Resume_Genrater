@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choose Template</title>
+  <script defer src="/js/script.js"></script>
+  <link rel="stylesheet" href="/css/templateStyle/style.css">
+  <link rel="stylesheet" href="/css/staticFile/style.css">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+      <div class="info">
+        <h1>CHOOSE YOUR RESUME TEMPLATE</h1
+        <p>click on the button for chooseing template</p>
+      </div>
+      <div class="templates">
+        <form action="/select-template" method="POST">
+          <div class="template-1">
+            <img src="https://resumebuild.com/app/static/images/thumbs/en/webp/cv-distinct.webp">
+            <input type="submit" value="template1" name="template">
+          </div>
+          <div class="template-2">
+            <img src="https://resumebuild.com/app/static/images/thumbs/en/webp/cv-bold.webp">
+            <input type="submit" value="COMEING SOON" name="template" disabled>
+          </div>
+        </form>
+      </div>
+   <%- include('partials/footer') %>
+</body>
+</html>
