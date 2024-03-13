@@ -59,7 +59,6 @@ app.post('/skill-data', (req, res)=>{
 })
 app.post('/summary-data', (req, res)=>{
   summaryFormData = req.body;
-  console.log(educationFormData);
   res.render(`template/${selectedTemplate}`, {
     personalFormData,
     experienceFormData,
